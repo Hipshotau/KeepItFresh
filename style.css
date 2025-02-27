@@ -67,10 +67,35 @@ ul {
 }
 
 li {
-    background: white;
+    background: #333;
     margin: 5px 0;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     color: #333;
 }
+
+li {
+    background: #333;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .remove-button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .remove-button:hover {
+    background: #c82333;
+  }
