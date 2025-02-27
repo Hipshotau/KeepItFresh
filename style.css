@@ -1,61 +1,76 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #333232;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
-  
-  .container {
-    background: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    background: rgb(63, 63, 63);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-  }
-  
-  h1 {
+}
+
+.inventory {
+    width: 30%;
+    background: #122435;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #f1c40f; /* Soft yellow for readability */
+}
+
+.main {
+    width: 65%;
+}
+
+h1,
+h2 {
     margin-bottom: 20px;
-  }
-  
-  form {
+}
+
+form {
     display: flex;
     flex-direction: column;
-  }
-  
-  input, button {
+}
+
+input,
+button {
     margin: 10px 0;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  
-  button {
+}
+
+button {
     background: #28a745;
-    color: white;
+    color: rgb(63, 63, 63);
     cursor: pointer;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background: #218838;
-  }
-  
-  ul {
+}
+
+ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  li {
-    background: #f8f9fa;
+}
+
+li {
+    background: white;
     margin: 5px 0;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    color: #333;
+}
