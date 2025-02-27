@@ -83,14 +83,14 @@ const commonFoods = [
   // Check for expired or near-expired items
   function checkExpirations(foods) {
     const today = new Date();
-    const oneWeekFromNow = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
-  
+    const threeDaysFromNow = new Date(today.getTime() + 3 * 24 * 60 * 60 * 1000); // 3 days from now
+    
     foods.forEach(food => {
       const expirationDate = new Date(food.date);
   
       if (expirationDate < today) {
         alert(`⚠️ ${food.name} has expired!`);
-      } else if (expirationDate <= oneWeekFromNow) {
+      } else if (expirationDate <= threeDaysFromNow) {
         alert(`⚠️ ${food.name} is expiring soon!`);
       }
     });
