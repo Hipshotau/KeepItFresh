@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #333232;
@@ -5,14 +6,15 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* Align to the top on mobile */
+    min-height: 100vh;
+    padding: 20px; /* Add padding for better spacing */
 }
 
 .container {
     display: flex;
-    justify-content: space-between;
-    width: 80%;
+    flex-direction: column; /* Stack sections vertically on mobile */
+    width: 100%;
     max-width: 1200px;
     background: rgb(63, 63, 63);
     padding: 20px;
@@ -20,8 +22,12 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.inventory, .main {
+    width: 100%; /* Full width on mobile */
+    margin-bottom: 20px; /* Add spacing between sections */
+}
+
 .inventory {
-    width: 30%;
     background: #122435;
     padding: 10px;
     border-radius: 8px;
@@ -30,12 +36,12 @@ body {
 }
 
 .main {
-    width: 65%;
+    color: #fff; /* White text for better contrast */
 }
 
-h1,
-h2 {
+h1, h2 {
     margin-bottom: 20px;
+    color: #f1c40f; /* Soft yellow for headings */
 }
 
 form {
@@ -43,18 +49,19 @@ form {
     flex-direction: column;
 }
 
-input,
-button {
+input, button {
     margin: 10px 0;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px; /* Larger font for better readability */
 }
 
 button {
     background: #28a745;
     color: rgb(63, 63, 63);
     cursor: pointer;
+    border: none;
 }
 
 button:hover {
@@ -72,30 +79,109 @@ li {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    color: #333;
-}
-
-li {
-    background: #333;
-    margin: 5px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #fff;
-  }
-  
-  .remove-button {
+}
+
+.remove-button {
     background: #dc3545;
     color: white;
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .remove-button:hover {
+}
+
+.remove-button:hover {
     background: #c82333;
-  }
+}
+
+/* Hamburger Menu Styles */
+.menu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+#menu-toggle {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#menu-items {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #122435;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+}
+
+#menu-items li {
+    margin: 10px 0;
+}
+
+#menu-items button {
+    background: none;
+    border: none;
+    color: #f1c40f;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+}
+
+#menu-items button:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .container {
+        padding: 15px; /* Reduce container padding */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller heading for mobile */
+    }
+
+    h2 {
+        font-size: 20px; /* Smaller subheading for mobile */
+    }
+
+    input, button {
+        font-size: 14px; /* Smaller font for inputs and buttons */
+    }
+
+    li {
+        font-size: 14px; /* Smaller font for list items */
+    }
+
+    .menu {
+        top: 5px;
+        left: 5px;
+    }
+
+    #menu-toggle {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    #menu-items {
+        top: 35px;
+    }
+}

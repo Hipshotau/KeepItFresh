@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KeepItFresh</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <!-- Hamburger Menu -->
+    <div class="menu">
+        <button id="menu-toggle">☰</button>
+        <ul id="menu-items">
+            <li><button id="clear-inventory">Clear Inventory</button></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
     <div class="container">
         <div class="inventory">
             <h2>Your Fridge Inventory</h2>
@@ -25,7 +32,7 @@
             <ul id="food-list"></ul>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
-
 </html>
